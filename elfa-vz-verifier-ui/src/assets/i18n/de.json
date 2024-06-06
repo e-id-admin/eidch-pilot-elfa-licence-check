@@ -1,0 +1,74 @@
+{
+  "i18n.application.title": "LicenceCheck",
+  "i18n.application.description": "Application to verify electronic learner driver's licences.",
+  "i18n.application.organization.name": "Bundesamt für Strassen ASTRA",
+  "i18n.application.version": "Version",
+  "i18n.support.feedback": "Feedback",
+  "i18n.support.help": "Hilfe",
+  "i18n.support.contact": "Kontakt",
+  "i18n.support.more-information": "Weitere Projektinformationen",
+
+  "i18n.verifier.home.tab": "Home",
+  "i18n.verifier.home.title": "Gültigkeit eines elektronischen Lernfahrausweises überprüfen",
+  "i18n.verifier.home.description": "Elektronische Lernfahrausweise sind ein Pilotprojekt vom Bund und zurzeit nur im Kanton Appenzell Ausserrhoden verfügbar.",
+  "i18n.verifier.home.policy": "Ich habe die <a href='https://www.eid.admin.ch/de/lcheck-privacyandterms' target='_blank'>Datenschutzerklärung und Nutzungsbedingungen<img class='icon' src='assets/images/external.svg' alt='Icon'></img></a> gelesen und akzeptiere diese.",
+  "i18n.verifier.home.confirm-policy.button": "Nachweis überprüfen",
+  "i18n.verifier.home.confirm-policy.message": "Bitte lesen Sie die Datenschutzerklärung und Nutzungsbedingungen und akzeptieren diese wenn Sie damit einverstanden sind.",
+
+  "i18n.verifier.tab.home": "Home",
+  "i18n.verifier.tab.use-case": "Verifikation",
+
+  "i18n.core.button.cancel": "Abbrechen",
+
+  "i18n.verifier.use-case-selector.title": "Nachweis überprüfen",
+  "i18n.verifier.use-case-selector.description": "Wählen Sie aus wie Sie den Nachweis dieses elektronischen Lernfahrausweises überprüfen möchten.",
+
+  "i18n.verifier.use-cases.validity": "Gültigkeit",
+  "i18n.verifier.use-cases.validity.info-dialog.text": "Meistens reicht die Überprüfung der Gültigkeit. Detailinformationen wie das Geburtsdatum sind beispielsweise bei einer Fahrbegleitung nicht notwendig.",
+  "i18n.verifier.use-cases.allData": "Alle Daten",
+  "i18n.verifier.use-cases.allData.info-dialog.text": "Manchmal reicht die Gültigkeit alleine nicht. Detailinformationen wie das Geburtsdatum sind beispielsweise bei Polizeikontrollen oder bei Fahrschulanmeldungen notwendig.",
+
+  "i18n.verifier.use-cases.postfix.check": "überprüfen",
+  "i18n.verifier.use-cases.postfix.request": "anfragen",
+
+  "i18n.verifier.use-case.info-dialog.info": "Folgende Daten werden dabei angefragt:",
+
+  "i18n.verifier.start-verification.title": "Zeigen Sie den QR-Code der Person, die sich ausweisen möchte. So kann diese den Code mit der pilotWallet scannen und Ihre Anfrage überprüfen.",
+
+  "i18n.verifier.verification-result.title": "Gültigkeit anfragen",
+  "i18n.verifier.verification-result.lfa.label": "Lernfahrausweis",
+  "i18n.verifier.verification-result.status.valid": "Gültig",
+  "i18n.verifier.verification-result.status.invalid": "Ungültig/Gesperrt",
+
+  "i18n.verifier.verification-result.attribute.firstName": "Vorname",
+  "i18n.verifier.verification-result.attribute.lastName": "Name",
+  "i18n.verifier.verification-result.attribute.hometown": "Heimatort",
+  "i18n.verifier.verification-result.attribute.dateOfExpiration": "Ablaufdatum",
+  "i18n.verifier.verification-result.attribute.categoryCode": "Kategorie",
+  "i18n.verifier.verification-result.attribute.categoryRestrictions": "Zusatzangaben auf der Kategorie",
+  "i18n.verifier.verification-result.attribute.restrictionsA": "Zusatzangaben (A)",
+  "i18n.verifier.verification-result.attribute.restrictionsB": "Zusatzangaben (B)",
+  "i18n.verifier.verification-result.attribute.registrationNumber": "RegNr.",
+  "i18n.verifier.verification-result.attribute.faberPin": "Faber Pin",
+  "i18n.verifier.verification-result.attribute.credentialNumber": "Nummer des Lernfahrausweises",
+  "i18n.verifier.verification-result.attribute.dateOfBirth": "Geburtsdatum",
+  "i18n.verifier.verification-result.attribute.issuerEntity": "Ausstellende Behörde",
+  "i18n.verifier.verification-result.attribute.issuerEntityDate": "Ausstelldatum",
+  "i18n.verifier.verification-result.attribute.photoImage": "Foto",
+  "i18n.verifier.verification-result.attributeGroup.validity": "Gültigkeit",
+  "i18n.verifier.verification-result.attributeGroup.validity.status": "Ausweis ist gültig",
+  "i18n.verifier.verification-result.attributeGroup.validity.invalidityExpiration": "gesperrt bis {{date}}",
+  "i18n.verifier.verification-result.attributeGroup.learningPerson": "Lernfahrende Person",
+  "i18n.verifier.verification-result.attributeGroup.additionalInformation": "Ergänzende Informationen",
+
+  "i18n.verifier.verification-result.rejection.description": "Ihre Überprüfungsanfrage wurde von der anderen Person abgelehnt.",
+  "i18n.verifier.verification-result.timeout.description": "Die Datenübermittlung ist fehlgeschlagen. Der Nachweis konnte nicht überprüft werden. Bitte versuchen Sie es nochmals mit einem neuen QR-Code.",
+  "i18n.verifier.verification-result.invalid.description": "Dieser Lernfahrausweis ist ungültig.",
+
+  "i18n.verifier.verification-result.button.understood": "Verstanden",
+
+  "i18n.exception.technical": "Ein unerwarteter technischer Fehler ist aufgetreten.",
+  "i18n.exception.tech-adapter": "Fehler beim Zugriff auf die Vertrauensinfrastruktur",
+  "i18n.exception.file-storage ": "Fehler im Filesystem. Bitte kontaktieren Sie den Administrator.",
+  "i18n.exception.file-mapping": "Fehler im beim Laden der Verifikationsmethoden. Bitte kontaktieren Sie den Administrator."
+}

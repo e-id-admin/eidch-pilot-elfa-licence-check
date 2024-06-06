@@ -1,0 +1,15 @@
+verifier:
+  metaData:
+    clientName: "LicenceCheck (Local)"
+    logoUri: "http://localhost:4210/assets/images/credential_logo.png"
+server:
+  port: 8090
+
+cors:
+  allowed-origins:
+    - 'http://localhost:8090'
+    - 'http://localhost:4210'
+
+techAdapter:
+  endpoint: "MOCKED"
+  password: "MOCKED"

@@ -1,0 +1,14 @@
+@import "styles";
+
+.mat-card {
+  background-color: $lightGrey;
+}
+
+.info-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: $blue;
+  cursor: pointer;
+  font-size: 30px;
+}

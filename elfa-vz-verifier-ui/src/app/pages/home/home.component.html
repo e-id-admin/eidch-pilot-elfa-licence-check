@@ -1,0 +1,32 @@
+<div class="centered-component">
+  <div class="content">
+    <div id="home" class="ob-grid">
+      <div class="ob-span-12">
+        <div class="center-image">
+          <img src="assets/images/welcome.svg" alt="Welcome Image" />
+        </div>
+        <div class="title">{{ "i18n.verifier.home.title" | translate }}</div>
+        <div class="description">{{ "i18n.verifier.home.description" | translate }}</div>
+
+        <div class="policy">
+          <div class="message" *ngIf="showMessage">
+            {{ "i18n.verifier.home.confirm-policy.message" | translate }}
+          </div>
+          <div class="{{ policyGroup }}">
+            <div class="flex-container">
+              <div class="checkbox-container">
+                <mat-checkbox [checked]="isPolicyConfirmed()" (change)="checkPolicy($event.checked)"></mat-checkbox>
+              </div>
+              <div class="docs-html-sample-preview" [innerHTML]="'i18n.verifier.home.policy' | translate"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-buttons">
+      <button (click)="confirmPolicy()" class="ob-button" id="close-button" mat-button obButton="primary" type="button">
+        {{ "i18n.verifier.home.confirm-policy.button" | translate }}
+      </button>
+    </div>
+  </div>
+</div>

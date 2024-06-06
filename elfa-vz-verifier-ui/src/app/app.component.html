@@ -1,0 +1,36 @@
+<aside class="banner" *ngIf="banner" [style.color]="banner.color" [style.backgroundColor]="banner.bgColor">
+  {{ banner.text }}
+</aside>
+<ob-master-layout>
+  <ng-container obHeaderTitle>
+    <div class="header-title-container">
+      <img ngSrc="assets/images/licencecheck_logo.svg" alt="LicenceCheck Logo" height="39" width="40" />
+      <p class="licence-check">LicenceCheck</p>
+    </div>
+  </ng-container>
+
+  <ng-template #obHeaderMobileControl #obHeaderControl>
+    <p class="help">
+      <button mat-icon-button obButton="tertiary" [obPopover]="popoverM" [placement]="'bottom-start'">
+        <mat-icon svgIcon="help-circle"></mat-icon>
+      </button>
+    </p>
+  </ng-template>
+
+  <ng-container obFooterInfo>
+    <p class="footer-left">
+      &copy; {{ currentYear }} {{ "i18n.application.organization.name" | translate }} -
+      {{ "i18n.application.version" | translate }}
+      <span data-test-id="home-app-version">{{ appVersion }}</span>
+    </p>
+  </ng-container>
+</ob-master-layout>
+
+<ng-template #popoverM>
+  <div class="popover-title">Support</div>
+  <div class="popover-content">
+    <div *ngFor="let item of supportItems" class="support-item">
+      <a [href]="item.link" class="ext-link">{{ item.label | translate }}</a>
+    </div>
+  </div>
+</ng-template>

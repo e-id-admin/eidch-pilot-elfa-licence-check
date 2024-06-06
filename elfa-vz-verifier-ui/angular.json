@@ -1,0 +1,143 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "elfa-vz-verifier-ui": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "target/classes/static",
+            "index": "src/index.html",
+            "baseHref": "/",
+            "main": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "node_modules/@oblique/oblique/assets",
+                "output": "assets"
+              },
+              "src/assets",
+              "src/favicon.png",
+              "src/manifest.json"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            },
+            "styles": [
+              "./node_modules/@oblique/oblique/styles/scss/oblique-core.scss",
+              "./node_modules/@oblique/oblique/styles/scss/oblique-alert.scss",
+              "./node_modules/@oblique/oblique/styles/scss/oblique-icons.scss",
+              "src/styles/css/frutiger.css",
+              "./node_modules/@oblique/oblique/styles/css/roboto.css"
+            ],
+            "scripts": ["node_modules/@oblique/oblique/ob-features.js"],
+            "allowedCommonJsDependencies": ["ajv", "ajv-formats"]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "3mb",
+                  "maximumError": "4mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "140kb",
+                  "maximumError": "150kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": {
+                "scripts": true,
+                "styles": false,
+                "hidden": false,
+                "vendor": true
+              },
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "./proxy.conf.js"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "elfa-vz-verifier-ui:build:production"
+            },
+            "development": {
+              "browserTarget": "elfa-vz-verifier-ui:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "configPath": "./tests/jest.config.js",
+            "watch": true,
+            "verbose": true
+          },
+          "configurations": {
+            "production": {
+              "watch": false,
+              "verbose": false
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "elfa-vz-verifier-ui",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "app",
+      "style": "scss"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  },
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics",
+    "analytics": false
+  }
+}

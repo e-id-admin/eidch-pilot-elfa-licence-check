@@ -1,0 +1,108 @@
+{
+  "id": "868c7f56-0e65-4bfd-8c82-68345203b193",
+  "title": "allData",
+  "description": "Maximalüberprüfung z.B. um das Dossier zum Eintritt Fahrschule zu erstellen.",
+  "order": 2,
+  "attributeGroups": [
+    {
+      "name": "image",
+      "order": 1,
+      "attributes": [
+        {
+          "name": "photoImage",
+          "type": "image",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "name": "learningPerson",
+      "order": 2,
+      "attributes": [
+        {
+          "name": "lastName",
+          "type": "string",
+          "order": 2
+        },
+        {
+          "name": "firstName",
+          "type": "string",
+          "order": 3
+        },
+        {
+          "name": "dateOfBirth",
+          "type": "date",
+          "order": 4
+        },
+        {
+          "name": "hometown",
+          "type": "string",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "name": "validity",
+      "order": 3,
+      "attributes": [
+        {
+          "name": "issuerEntityDate",
+          "type": "date",
+          "order": 6
+        },
+        {
+          "name": "dateOfExpiration",
+          "type": "date",
+          "order": 7
+        }
+      ]
+    },
+    {
+      "name": "additionalInformation",
+      "order": 4,
+      "attributes": [
+        {
+          "name": "issuerEntity",
+          "type": "string",
+          "order": 8
+        },
+        {
+          "name": "credentialNumber",
+          "type": "string",
+          "order": 9
+        },
+        {
+          "name": "registrationNumber",
+          "type": "string",
+          "order": 10
+        },
+        {
+          "name": "faberPin",
+          "type": "string",
+          "order": 11
+        },
+        {
+          "name": "categoryCode",
+          "type": "string",
+          "order": 12
+        },
+        {
+          "name": "categoryRestrictions",
+          "type": "string",
+          "order": 14
+        },
+        {
+          "name": "restrictionsA",
+          "type": "string",
+          "order": 15
+        },
+        {
+          "name": "restrictionsB",
+          "type": "string",
+          "order": 16
+        }
+      ]
+    }
+  ]
+
+}

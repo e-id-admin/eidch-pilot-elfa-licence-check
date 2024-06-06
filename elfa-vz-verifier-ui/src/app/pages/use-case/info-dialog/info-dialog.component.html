@@ -1,0 +1,26 @@
+<div *ngIf="item" class="dialog">
+  <h1 class="title" mat-dialog-title>{{ "i18n.verifier.use-cases." + item.title | translate }}</h1>
+
+  <div class="content">
+    {{ "i18n.verifier.use-cases." + data.item.title + ".info-dialog.text" | translate }}
+  </div>
+
+  <div class="separator"></div>
+  <div class="info">
+    <div class="info-title">
+      {{ "i18n.verifier.use-case.info-dialog.info" | translate }}
+    </div>
+    <ng-container *ngFor="let attributeGroup of item.attributeGroups">
+      <div *ngFor="let attribute of attributeGroup.attributes">
+        <img src="assets/images/checkmark.svg" alt="Checkmark Image" />
+        {{ "i18n.verifier.verification-result.attribute." + attribute.name | translate }}
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="close">
+    <button (click)="close()" class="ob-button" id="close-button" mat-button obButton="primary" type="button">
+      {{ "i18n.verifier.verification-result.button.understood" | translate }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+{
+  "name": "LicenceCheck",
+  "short_name": "LicenceCheck",
+  "icons": [
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

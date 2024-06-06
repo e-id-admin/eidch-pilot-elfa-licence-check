@@ -1,0 +1,44 @@
+@import "styles";
+
+.center-image {
+  text-align: center;
+}
+
+.policy {
+  padding-top: 40px;
+}
+
+.policy-group {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: $lightBlue;
+}
+
+.policy-group-error {
+  @extend .policy-group;
+  background-color: $lightRed;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin: 15px;
+  transform: scale(1.5);
+}
+
+.message {
+  color: $red;
+  margin-top: -40px;
+}
+
+@media (max-width: 600px) {
+  .policy-link {
+    display: inline;
+  }
+}
