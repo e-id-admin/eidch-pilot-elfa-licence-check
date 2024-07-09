@@ -1,0 +1,50 @@
+{
+  "id": "b8b0350a-bed2-4de0-a39e-47567a4b4fbb",
+  "title": "validity",
+  "description": "Minimalüberprüfung des Nachweises (Standard)",
+  "order": 1,
+  "attributeGroups": [
+    {
+      "name": "image",
+      "order": 1,
+      "attributes": [
+        {
+          "name": "photoImage",
+          "type": "image",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "name": "additionalInformation",
+      "order": 4,
+      "attributes": [
+        {
+          "name": "dateOfExpiration",
+          "type": "date",
+          "order": 7
+        },
+        {
+          "name": "categoryCode",
+          "type": "string",
+          "order": 12
+        },
+        {
+          "name": "categoryRestrictions",
+          "type": "string",
+          "order": 14
+        },
+        {
+          "name": "restrictionsA",
+          "type": "string",
+          "order": 15
+        },
+        {
+          "name": "restrictionsB",
+          "type": "string",
+          "order": 16
+        }
+      ]
+    }
+  ]
+}

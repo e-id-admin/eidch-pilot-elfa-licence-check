@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: elfa-vz-verifier-scs
+
+server:
+  servlet:
+    context-path: /
+  compression:
+    enabled: true
+  #Increase the max header size as token can be quite big. 4MB should be enough for ~100'000 Roles for one user, normally this should be plenty
+  max-http-request-header-size: 4MB
+
+verifier:
+  use-case-folderPath: "use-cases"
+  metaData:
+    clientName: "Pilot Verifier"
+
+springdoc:
+  swagger-ui:
+    oauth:
+      client-id: elfa-vz-verifier-swagger
+
+# default logging level
+logging:
+  level:
+    root: info

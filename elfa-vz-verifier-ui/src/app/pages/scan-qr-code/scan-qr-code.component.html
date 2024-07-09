@@ -1,0 +1,19 @@
+<div class="qr-centered-component">
+  <div class="component-title">
+    {{ "i18n.verifier.use-cases." + this.useCase?.title | translate }}
+    {{ "i18n.verifier.use-cases.postfix.check" | translate }}
+  </div>
+  <div class="content mat-card">
+    <div class="text" id="title">{{ "i18n.verifier.start-verification.title" | translate }}</div>
+    <img *ngIf="this.response" src="{{ base64image }}" alt="profile picture" class="qrcode-image" />
+  </div>
+
+  <div class="scan-qr-code-cancel-button">
+    <button (click)="close()" class="ob-button" id="close-button" mat-button obButton="secondary" type="button">
+      {{ "i18n.core.button.cancel" | translate }}
+    </button>
+  </div>
+</div>
+<div>
+  <ob-spinner channel="test"></ob-spinner>
+</div>

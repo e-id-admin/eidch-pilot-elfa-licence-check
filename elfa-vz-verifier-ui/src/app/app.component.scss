@@ -1,0 +1,49 @@
+@import "styles";
+
+.help {
+  float: right;
+  margin: 10px 5px;
+}
+
+// hide burger menu
+.ob-master-layout-header-toggle-container {
+  display: none !important;
+}
+
+.ob-popover-content {
+  position: fixed !important;
+  max-width: 100%;
+}
+
+.popover-title {
+  font-weight: 700;
+  font-size: larger;
+  width: 310px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.popover-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-item {
+  display: flex;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+}
+
+.header-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.licence-check {
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 10px;
+  margin-top: 18px;
+}

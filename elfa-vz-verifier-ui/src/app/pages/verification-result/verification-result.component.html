@@ -1,0 +1,129 @@
+<div class="centered-component">
+  <div class="content">
+    <ob-sticky [footerSize]="'sm'" [headerSize]="'sm'" class="feature">
+      <ng-template #obStickyMain>
+        <div *ngIf="displayVc()">
+          <div class="ob-grid">
+            <ng-template [ngForOf]="getSortedAttributeGroups()" let-group let-last="last" ngFor>
+              <h5 *ngIf="displayGroup(group)" class="ob-full text-alignment">
+                <strong>{{ "i18n.verifier.verification-result.attributeGroup." + group.name | translate }}</strong>
+              </h5>
+
+              <ng-template [ngForOf]="getSortedAttributes(group)" let-item let-first="first" ngFor>
+                <!-- display image and status-->
+                <div *ngIf="item.type === 'image'" class="ob-full image-content {{ statusStyle }}" id="{{ item.name }}">
+                  <div class="status-container">
+                    <div class="ob-grid">
+                      <div class="ob-half center-validity-content">
+                        <div class="ob-full status-label">
+                          {{ "i18n.verifier.verification-result.lfa.label" | translate }}
+                        </div>
+                        <div class="ob-full status-icon" id="status">
+                          <mat-icon [svgIcon]="'checkmark-circle'"></mat-icon>
+                        </div>
+                        <div class="ob-full status-text">
+                          <div class="ob-full status-text" id="status-success-message">
+                            {{ "i18n.verifier.verification-result.status.valid" | translate }}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ob-half">
+                        <img
+                          alt="profile picture"
+                          class="photo-image"
+                          id="photo-image"
+                          src="{{ base64image(item.name) }}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- display validity status -->
+                <div *ngIf="first && group.name === 'validity'" class="ob-full text-alignment">
+                  <div class="ob-full validity-valid">
+                    <strong>{{
+                      "i18n.verifier.verification-result.attributeGroup.validity.status" | translate
+                    }}</strong>
+                  </div>
+                </div>
+                <!-- display text value -->
+                <div *ngIf="item.type !== 'image'" class="ob-full text-alignment" id="{{ item.name }}">
+                  <div class="attribute">
+                    <div class="ob-full attribute-label" id="{{ item.name }}-label">
+                      {{ "i18n.verifier.verification-result.attribute." + item.name | translate }}:
+                    </div>
+                    <div class="ob-full" id="{{ item.name }}-value">{{ getAttribute(item.name) }}</div>
+                  </div>
+                </div>
+              </ng-template>
+              <mat-divider *ngIf="!last" [style]="'margin-top: 10px'" class="ob-full"></mat-divider>
+            </ng-template>
+          </div>
+        </div>
+
+        <div *ngIf="displayTimeout()" class="image-content">
+          <div class="component-title">
+            {{ "i18n.verifier.use-cases." + this.useCase?.title | translate }}
+            {{ "i18n.verifier.use-cases.postfix.check" | translate }}
+          </div>
+          <div class="verification-error status-container">
+            <div class="ob-grid">
+              <div class="ob-full">
+                <div class="ob-full status-icon-error">
+                  <mat-icon [svgIcon]="'warning-triangle'"></mat-icon>
+                </div>
+                <div class="ob-full error-text">
+                  <strong>{{ "i18n.verifier.verification-result.timeout.description" | translate }}</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="displayRejected()" class="image-content">
+          <div class="component-title">
+            {{ "i18n.verifier.use-cases." + this.useCase?.title | translate }}
+            {{ "i18n.verifier.use-cases.postfix.check" | translate }}
+          </div>
+          <div class="verification-error status-container">
+            <div class="ob-grid">
+              <div class="ob-full">
+                <div class="ob-full status-icon-error">
+                  <mat-icon [svgIcon]="'eye-slash'"></mat-icon>
+                </div>
+                <div class="ob-full error-text">
+                  <strong>{{ "i18n.verifier.verification-result.rejection.description" | translate }}</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="displayInvalid()" class="image-content">
+          <div class="component-title">
+            {{ "i18n.verifier.use-cases." + this.useCase?.title | translate }}
+            {{ "i18n.verifier.use-cases.postfix.check" | translate }}
+          </div>
+          <div class="invalid-screen status-container">
+            <div class="ob-grid">
+              <div class="ob-full">
+                <div class="ob-full status-icon">
+                  <mat-icon class="icon-ban" [svgIcon]="'ban'"></mat-icon>
+                </div>
+                <div class="ob-full error-text">
+                  <strong>{{ "i18n.verifier.verification-result.invalid.description" | translate }}</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ob-sticky>
+
+    <div class="verification-footer-buttons">
+      <button (click)="close()" class="ob-button" id="close-button" mat-button obButton="primary" type="button">
+        {{ "i18n.verifier.verification-result.button.understood" | translate }}
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+@import "styles";
+
+.dialog {
+  overflow-y: auto;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 10px 10px 0 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  padding: 10px 20px;
+}
+
+.info {
+  font-size: 16px;
+  font-style: normal;
+  margin: 10px;
+  padding: 10px;
+
+  .info-title {
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+}
+
+.separator {
+  border-bottom: 1px solid $darkGrey;
+  margin: 10px;
+}
+
+.close {
+  width: 100%;
+  text-align: right;
+  padding: 10px;
+
+  button {
+    margin: 10px;
+  }
+}

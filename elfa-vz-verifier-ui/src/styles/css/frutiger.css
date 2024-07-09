@@ -1,0 +1,41 @@
+/**
+* @file Oblique, The front-end framework for your Swiss branded UI.
+* @copyright 2020 - 2023 Federal Office of Information Technology, Systems and Telecommunication FOITT {@link http://www.bit.admin.ch}
+* @version 10.2.0 (released on 2023-08-31, supported at least until 2024-02-29)
+* @author Oblique team, FOITT, BS-BSC-EN4 <oblique@bit.admin.ch>
+* @license MIT {@link https://oblique.bit.admin.ch/license}
+* @see http://oblique.bit.oblique.ch
+*/
+
+/* ../../../ is to cancel assets/styles/css path while keeping an eventual baseHref */
+@font-face {
+	font-family: "Frutiger Neue";
+	src: local("Frutiger Neue"), url("src/assets/fonts/FrutigerNeueW02-Bd.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "Frutiger Neue";
+	src: local("Frutiger Neue"), url("src/assets/fonts/FrutigerNeueW02-It.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "Frutiger Neue";
+	src: local("Frutiger Neue"), url("src/assets/fonts/FrutigerNeueW02-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "Frutiger Neue";
+	src: local("Frutiger Neue"), url("src/assets/fonts/FrutigerNeueW02-Light.woff2") format("woff2");
+	font-weight: 100;
+	font-style: normal;
+	font-display: fallback;
+}

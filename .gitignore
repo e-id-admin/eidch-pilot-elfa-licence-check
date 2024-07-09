@@ -1,0 +1,25 @@
+# Created by .ignore support plugin (hsz.mobi)
+target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
+.idea/*
+!.idea/runConfigurations/
+!.idea/codeStyles
+!.idea/codeStyles/*.xml
+/.idea/codeStyles/
+
+### Custom Ignore
+/elfa-vz-verifier-ui/coverage/
+*.versionsBackup

@@ -1,0 +1,138 @@
+@import "styles";
+
+.center-validity-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.verification {
+  padding: 20px;
+  border-radius: 20px;
+  color: $white;
+}
+
+.verification-success {
+  @extend .verification;
+  background-color: $green;
+}
+
+.verification-invalid {
+  @extend .verification;
+  background-color: $red;
+}
+
+.verification-error {
+  @extend .verification;
+  height: 517px;
+  width: 350px;
+  background-color: $lightGrey;
+
+  .error-text {
+    color: $black !important;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 20px;
+  }
+}
+
+.invalid-screen {
+  @extend .verification;
+  height: 517px;
+  width: 350px;
+  background-color: $red;
+
+  .error-text {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 20px;
+  }
+}
+
+.verification-footer-buttons {
+  width: 100%;
+  text-align: center;
+
+  button {
+    margin: 0 10px;
+  }
+}
+
+.status-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.status-label {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+}
+
+.status-icon {
+  margin-top: 10px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.status-icon-error {
+  color: $red;
+  font-size: 50px;
+  text-align: center;
+}
+
+.status-text {
+  font-size: 20px;
+  text-align: center;
+}
+
+.photo-image {
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.attribute-label {
+  color: $darkGrey;
+}
+
+.attribute {
+  row-gap: 5px !important;
+}
+
+.validity-valid {
+  color: $green;
+}
+
+.content {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.image-content {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 340px !important;
+}
+
+.text-alignment {
+  text-align: left !important;
+}
+
+.icon-ban {
+  width: 43px;
+  height: 42px;
+}

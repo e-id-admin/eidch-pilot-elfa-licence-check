@@ -1,0 +1,18 @@
+{
+  "id": "c2041c31-db6b-4cf1-871d-6a24d400159b",
+  "title": "title",
+  "description": "description",
+  "attributeGroups": [
+    {
+      "name": "name",
+      "order": 1,
+      "attributes": [
+        {
+          "name": "name",
+          "type": "type",
+          "order": 1
+        }
+      ]
+    }
+  ]
+}

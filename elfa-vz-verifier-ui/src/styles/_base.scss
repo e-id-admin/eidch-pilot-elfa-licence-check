@@ -1,0 +1,65 @@
+.ob-grid {
+  gap: 10px !important;
+}
+
+.icon {
+  height: 16px;
+  width: 16px;
+  padding-left: 3px;
+}
+
+.centered-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.content {
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.component-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-weight: 700 !important;
+  font-size: 24px;
+  line-height: 30px;
+  padding-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 15px;
+  color: $black;
+}
+
+.footer-buttons {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+
+  button {
+    margin: 0 10px;
+  }
+}
+
+.banner {
+  position: absolute;
+  top: 0.5rem;
+  left: -3rem;
+  z-index: 10000;
+  transform: rotate(-45deg);
+  padding: 0.5rem 3.5rem;
+  pointer-events: none;
+  font-size: 1.2rem;
+}
