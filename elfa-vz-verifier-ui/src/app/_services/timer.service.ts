@@ -24,6 +24,6 @@ export class TimerService {
   }
 
   subscribeToTimer(f: {next: () => void}) {
-    this.timerObservable.subscribe(f);
+    this.timerSubscription = this.timerObservable.subscribe(f);
   }
 }

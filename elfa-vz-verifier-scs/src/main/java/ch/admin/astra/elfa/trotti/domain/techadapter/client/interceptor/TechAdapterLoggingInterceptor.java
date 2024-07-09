@@ -10,7 +10,7 @@ public class TechAdapterLoggingInterceptor {
 
     public HttpLoggingInterceptor getInterceptor() {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
-        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
+        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
         httpLoggingInterceptor.redactHeader(X_API_KEY);
         return httpLoggingInterceptor;
     }

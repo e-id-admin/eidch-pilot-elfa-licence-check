@@ -41,9 +41,9 @@
               "includePaths": ["src/styles"]
             },
             "styles": [
-              "./node_modules/@oblique/oblique/styles/scss/oblique-core.scss",
-              "./node_modules/@oblique/oblique/styles/scss/oblique-alert.scss",
-              "./node_modules/@oblique/oblique/styles/scss/oblique-icons.scss",
+              "./node_modules/@oblique/oblique/styles/css/oblique-core.css",
+              "./node_modules/@oblique/oblique/styles/css/oblique-alert.css",
+              "./node_modules/@oblique/oblique/styles/css/oblique-icons.css",
               "src/styles/css/frutiger.css",
               "./node_modules/@oblique/oblique/styles/css/roboto.css"
             ],
@@ -55,8 +55,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "3mb",
-                  "maximumError": "4mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -95,10 +95,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "elfa-vz-verifier-ui:build:production"
+              "buildTarget": "elfa-vz-verifier-ui:build:production"
             },
             "development": {
-              "browserTarget": "elfa-vz-verifier-ui:build:development"
+              "buildTarget": "elfa-vz-verifier-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -126,7 +126,6 @@
       }
     }
   },
-  "defaultProject": "elfa-vz-verifier-ui",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
@@ -137,7 +136,7 @@
     }
   },
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics",
-    "analytics": false
+    "analytics": false,
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

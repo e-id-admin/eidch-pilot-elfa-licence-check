@@ -23,23 +23,13 @@ import localeENCH from '@angular/common/locales/en-CH';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 
-import {MatLegacyFormFieldModule} from '@angular/material/legacy-form-field';
-import {MatLegacyInputModule} from '@angular/material/legacy-input';
-import {MatLegacyButtonModule} from '@angular/material/legacy-button';
-import {MatLegacyCardModule} from '@angular/material/legacy-card';
-import {MatLegacyTabsModule} from '@angular/material/legacy-tabs';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatListModule} from '@angular/material/list';
 import {MatBadgeModule} from '@angular/material/badge';
-import {MatLegacyTableModule} from '@angular/material/legacy-table';
-import {MatLegacyPaginatorModule} from '@angular/material/legacy-paginator';
 import {MatSortModule} from '@angular/material/sort';
-import {MatLegacyTooltipModule} from '@angular/material/legacy-tooltip';
 import {MatStepperModule} from '@angular/material/stepper';
-import {MatLegacyChipsModule} from '@angular/material/legacy-chips';
-import {MatLegacyDialogModule} from '@angular/material/legacy-dialog';
 import {UseCaseComponent} from '@app/pages/use-case/use-case.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -54,6 +44,14 @@ import {HomeComponent} from '@app/pages/home/home.component';
 import {AppConfigService} from '@app/core/app-config/app-config.service';
 import {AppComponent} from '@app/app.component';
 import {AppRoutingModule} from '@app/app-routing.module';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatChipsModule} from '@angular/material/chips';
 
 registerLocaleData(localeDECH);
 registerLocaleData(localeFRCH);
@@ -85,23 +83,23 @@ registerLocaleData(localeENCH);
     ObliqueModule,
     ObAuthenticationModule.forRoot(),
     // Material
-    MatLegacyButtonModule,
-    MatLegacyCardModule,
-    MatLegacyFormFieldModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
     MatIconModule,
     MatCheckboxModule,
-    MatLegacyInputModule,
+    MatInputModule,
     ReactiveFormsModule,
     MatListModule,
     MatBadgeModule,
-    MatLegacyTabsModule,
-    MatLegacyTableModule,
-    MatLegacyPaginatorModule,
+    MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule,
     MatSortModule,
-    MatLegacyTooltipModule,
+    MatTooltipModule,
     MatStepperModule,
-    MatLegacyChipsModule,
-    MatLegacyDialogModule,
+    MatChipsModule,
+    MatDialogModule,
     MatDialogModule,
     MatToolbarModule,
     NgOptimizedImage
@@ -136,9 +134,6 @@ export class AppModule {
   constructor(meta: ObDocumentMetaService, config: ObMasterLayoutConfig, translate: TranslateService) {
     translate.setDefaultLang('de');
     translate.use('de');
-    translate.get('i18n.application.title').subscribe((title: string) => {
-      meta.setTitle(title);
-    });
     config.locale.locales = ['de-CH'];
     config.homePageRoute = '/use-case';
   }

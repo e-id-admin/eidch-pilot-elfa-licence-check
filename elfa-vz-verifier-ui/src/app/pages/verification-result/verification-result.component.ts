@@ -24,7 +24,6 @@ export class VerificationResultComponent implements OnInit, OnDestroy {
     }
     this.verificationResponse = this.useCaseService.getVerificationResponse();
     this.useCase = this.useCaseService.getUseCase();
-
     this.startNavigationTimer();
   }
 
@@ -39,11 +38,7 @@ export class VerificationResultComponent implements OnInit, OnDestroy {
   }
 
   get statusStyle(): string {
-    if (this.isVcValid()) {
-      return 'verification-success';
-    } else {
-      return 'verification-invalid';
-    }
+    return this.isVcValid() ? 'verification-success' : 'verification-invalid';
   }
 
   base64image(key: string) {
@@ -71,31 +66,19 @@ export class VerificationResultComponent implements OnInit, OnDestroy {
   }
 
   displayVc(): boolean {
-    return this.verificationResponse?.status === 'SUCCESS';
+    return this.useCaseService.isVcValid();
   }
 
   displayTimeout(): boolean {
-    return (
-      this.verificationResponse?.status === 'FAILED' && this.verificationResponse?.errorCode === 'verification_expired'
-    );
+    return this.useCaseService.isTimeout();
   }
 
   displayRejected(): boolean {
-    return this.verificationResponse?.status === 'FAILED' && this.verificationResponse?.errorCode === 'client_rejected';
+    return this.useCaseService.isRejected();
   }
 
   displayInvalid(): boolean {
-    const functionalErrorCodes = [
-      'credential_invalid',
-      'credential_revoked',
-      'credential_suspended',
-      'credential_expired',
-      'jwt_expired'
-    ];
-    return (
-      this.verificationResponse?.status === 'FAILED' &&
-      functionalErrorCodes.includes(this.verificationResponse?.errorCode)
-    );
+    return this.useCaseService.isVcInvalid();
   }
 
   displayGroup(group: AttributeGroup) {

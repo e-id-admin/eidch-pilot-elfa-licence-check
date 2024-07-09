@@ -1,5 +1,15 @@
 {
-  "i18n.application.title": "LicenceCheck",
+  "i18n.title": "LicenceCheck",
+  "i18n.title.home": "Home",
+  "i18n.title.proof": "Nachweis überprüfen",
+  "i18n.title.allData": "Alle Daten anfragen",
+  "i18n.title.validity": "Gültigkeit anfragen",
+  "i18n.title.verification": "Verifikationsergebnis",
+  "i18n.title.licenceValid": "Lernfahrausweis gültig",
+  "i18n.title.requestFailed": "Anfrage fehlgeschlagen",
+  "i18n.title.requestRejected": "Anfrage abgelehnt",
+  "i18n.title.licenceInvalid": "Lernfahrausweis ungültig",
+
   "i18n.application.description": "Application to verify electronic learner driver's licences.",
   "i18n.application.organization.name": "Bundesamt für Strassen ASTRA",
   "i18n.application.version": "Version",

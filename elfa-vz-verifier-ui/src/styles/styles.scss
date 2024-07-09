@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import "@oblique/oblique/styles/scss/oblique-core";
+@import "@oblique/oblique/styles/scss/core/palette";
+@import "@oblique/oblique/styles/scss/core/variables";
+@import "@oblique/oblique/styles/scss/core/mixins/layout";
+@import "@oblique/oblique/styles/scss/core/mixins/shadow";
+@import "@oblique/oblique/styles/scss/core/mixins/typography";
 @import "colors";
 @import "base";

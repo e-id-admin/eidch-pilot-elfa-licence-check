@@ -14,7 +14,7 @@ module.exports = {
         "plugin:prettier/recommended",
       ],
       rules: {
-        "prettier/prettier": ["error", {"endOfLine": "auto"}],
+        "prettier/prettier": ["error", { endOfLine: "auto" }],
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -72,15 +72,15 @@ module.exports = {
     {
       files: ["*.html"],
       excludedFiles: ["*inline-template-*.component.html"],
-      extends: [
-          "plugin:@angular-eslint/template/recommended",
-          "plugin:prettier/recommended"
-      ],
+      extends: ["plugin:@angular-eslint/template/recommended", "plugin:prettier/recommended"],
       rules: {
-        "prettier/prettier": ["error", {
-          parser: "angular",
-          endOfLine: "auto"
-        }],
+        "prettier/prettier": [
+          "error",
+          {
+            parser: "angular",
+            endOfLine: "auto",
+          },
+        ],
       },
     },
   ],
