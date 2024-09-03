@@ -38,7 +38,6 @@
   "i18n.verifier.use-cases.allData": "Alle Daten",
   "i18n.verifier.use-cases.allData.info-dialog.text": "Manchmal reicht die Gültigkeit alleine nicht. Detailinformationen wie das Geburtsdatum sind beispielsweise bei Polizeikontrollen oder bei Fahrschulanmeldungen notwendig.",
 
-  "i18n.verifier.use-cases.postfix.check": "überprüfen",
   "i18n.verifier.use-cases.postfix.request": "anfragen",
 
   "i18n.verifier.use-case.info-dialog.info": "Folgende Daten werden dabei angefragt:",

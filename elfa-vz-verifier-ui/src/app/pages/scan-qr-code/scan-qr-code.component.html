@@ -1,11 +1,11 @@
 <div class="qr-centered-component">
   <div class="component-title">
     {{ "i18n.verifier.use-cases." + this.useCase?.title | translate }}
-    {{ "i18n.verifier.use-cases.postfix.check" | translate }}
+    {{ "i18n.verifier.use-cases.postfix.request" | translate }}
   </div>
   <div class="content mat-card">
     <div class="text" id="title">{{ "i18n.verifier.start-verification.title" | translate }}</div>
-    <img *ngIf="this.response" src="{{ base64image }}" alt="profile picture" class="qrcode-image" />
+    <img *ngIf="this.response" src="{{ base64image }}" alt="qr code" class="qrcode-image" />
   </div>
 
   <div class="scan-qr-code-cancel-button">

@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import static ch.admin.astra.elfa.trotti.domain.exception.BusinessReason.UNEXPECTED_TECHNICAL_ERROR;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
 @Slf4j
@@ -59,18 +58,6 @@ public class GlobalExceptionControllerAdvice {
                 .status(INTERNAL_SERVER_ERROR)
                 .body(ErrorResponse.builder()
                         .error(TechAdapterException.EXCEPTION_MSG)
-                        .build());
-    }
-
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorResponse> handleException(Exception e) {
-        log.error("An error occurred. Unexpected exception: {}", e.getMessage());
-        log.error(e.toString());
-
-        return ResponseEntity
-                .status(INTERNAL_SERVER_ERROR)
-                .body(ErrorResponse.builder()
-                        .error(UNEXPECTED_TECHNICAL_ERROR.getError())
                         .build());
     }
 }

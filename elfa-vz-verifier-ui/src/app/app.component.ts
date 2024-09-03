@@ -6,7 +6,7 @@ import {AppConfigService} from '@app/core/app-config/app-config.service';
 import {NavigationEnd, Router} from '@angular/router';
 import {filter} from 'rxjs';
 import {UseCaseService} from '@app/_services';
-import {Title} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -32,7 +32,8 @@ export class AppComponent implements OnInit {
     private router: Router,
     public useCaseService: UseCaseService,
     private titleService: Title,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private meta: Meta
   ) {
     this.router.events
       .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
@@ -49,6 +50,14 @@ export class AppComponent implements OnInit {
       const env = environment || 'PROD';
       this.banner = banner(env);
     });
+
+    this.meta.addTags([
+      {
+        name: 'keywords',
+        content:
+          'LicenceCheck, Licence Check, LicenseCheck, License Check, eLFA prüfen, eLFA verifizieren, elektronischer Lernfahrausweis prüfen, Lernfahrausweis elektronisch prüfen, Lernfahrausweis prüfen'
+      }
+    ]);
   }
 
   private updateTitle(url: string): void {

@@ -1,7 +1,7 @@
 {
   "title": "eLfa VZ-Verifier",
   "name": "elfa-vz-verifier-ui",
-  "version": "1.4.0",
+  "version": "1.6.0",
   "license": "All Rights Reserved",
   "organization": {
     "name": "Federal Office of Information Technology, Systems and Telecommunication FOITT",
@@ -14,11 +14,13 @@
     "build": "ng build",
     "watch": "ng build --watch",
     "test": "ng test",
+    "start-test": "ng serve --host 0.0.0.0 --port 4210 --configuration=test",
     "test:ci": "ng test --watch=false --run-in-band --force-exit --collect-coverage",
     "lint": "ng lint",
     "prettier": "./node_modules/.bin/prettier --write **/{*.ts,*.html,*.scss,*.json,*.js}",
     "format": "npm run lint -- --fix && npm run prettier",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:run-local": "cypress run --config-file cypress.config.ts"
   },
   "dependencies": {
     "@angular/animations": "^17.3.11",
@@ -60,10 +62,11 @@
     "@typescript-eslint/parser": "^7.13.0",
     "ajv": "^8.0.0",
     "babel-plugin-istanbul": "^6.1.1",
+    "cypress": "^13.13.0",
     "esbuild": "^0.21.5",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.0.0",
-    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-cypress": "^3.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^8.0.0",
     "jest": "^29.7.0",
@@ -72,9 +75,6 @@
     "typescript": "^5.4.5",
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-dev-server": "^4.15.2"
-  },
-  "optionalDependencies": {
-    "cypress": "^13.3.2"
   },
   "jestSonar": {
     "reportPath": "./coverage/sonarQube",

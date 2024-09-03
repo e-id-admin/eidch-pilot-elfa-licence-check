@@ -2,16 +2,15 @@
   <div class="content">
     <div class="title">{{ "i18n.verifier.use-case-selector.title" | translate }}</div>
     <div class="description">{{ "i18n.verifier.use-case-selector.description" | translate }}</div>
-
-    <ng-template [ngForOf]="useCases" let-i="index" let-item ngFor>
-      <div id="use-cases" class="ob-grid">
+    <div id="use-cases" class="ob-grid">
+      <ng-template [ngForOf]="useCases" let-i="index" let-item ngFor>
         <div class="ob-span-12">
           <mat-card id="use-case-{{ i }}">
             <mat-icon class="info-icon" [svgIcon]="'info-circle'" (click)="openInfoDialog(item)"></mat-icon>
             <mat-card-header>
               <mat-card-title class="title">
                 {{ "i18n.verifier.use-cases." + item.title | translate }}
-                {{ "i18n.verifier.use-cases.postfix.check" | translate }}
+                {{ "i18n.verifier.use-cases.postfix.request" | translate }}
               </mat-card-title>
               <mat-card-subtitle class="description">{{ item.description }}</mat-card-subtitle>
             </mat-card-header>
@@ -32,8 +31,8 @@
             </mat-card-content>
           </mat-card>
         </div>
-      </div>
-      <br />
-    </ng-template>
+        <br />
+      </ng-template>
+    </div>
   </div>
 </div>

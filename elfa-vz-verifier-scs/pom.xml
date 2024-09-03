@@ -5,7 +5,7 @@
     <parent>
         <groupId>ch.admin.astra.elfa.trotti</groupId>
         <artifactId>elfa-vz-verifier</artifactId>
-        <version>1.4.0</version>
+        <version>1.6.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -72,6 +72,11 @@
             <artifactId>logging-interceptor</artifactId>
             <version>${logging-interceptor.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>10.1.25</version>
+        </dependency>
 
         <!-- test -->
         <dependency>
@@ -101,10 +106,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.logstash.logback</groupId>
-            <artifactId>logstash-logback-encoder</artifactId>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>

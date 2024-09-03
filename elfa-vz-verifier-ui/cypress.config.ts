@@ -5,6 +5,8 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'http://localhost:4210/elfa-vz-verifier-scs'
+    baseUrl: 'http://localhost:4210',
+    chromeWebSecurity: false,
+    specPattern: 'cypress/e2e-local/*.cy.ts'
   }
 });

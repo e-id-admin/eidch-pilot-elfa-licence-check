@@ -4,7 +4,7 @@
     <parent>
         <groupId>ch.admin.astra.elfa.trotti</groupId>
         <artifactId>elfa-vz-verifier</artifactId>
-        <version>1.4.0</version>
+        <version>1.6.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -90,6 +90,8 @@
                                         <argument>--no-optional</argument>
                                     </arguments>
                                     <environmentVariables>
+                                        <HTTP_PROXY>http://proxy-bvcol.admin.ch:8080</HTTP_PROXY>
+                                        <HTTPS_PROXY>https://proxy-bvcol.admin.ch:8080</HTTPS_PROXY>
                                         <NODE_OPTIONS>--max_old_space_size=4096</NODE_OPTIONS>
                                     </environmentVariables>
                                 </configuration>

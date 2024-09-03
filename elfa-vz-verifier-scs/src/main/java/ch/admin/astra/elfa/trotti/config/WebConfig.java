@@ -15,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * This configuration makes sure that any route of a single page application in browser is forwarded to index.html.
  */
 @Configuration
-class WebConfig implements WebMvcConfigurer {
+public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -30,5 +30,10 @@ class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LogInterceptor());
+    }
+
+    @Bean
+    public FrontendRouteRedirectExceptionHandler frontendRouteRedirectExceptionHandler() {
+        return new FrontendRouteRedirectExceptionHandler();
     }
 }

@@ -84,6 +84,19 @@
                 "vendor": true
               },
               "namedChunks": true
+            },
+            "test": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": {
+                "scripts": true,
+                "styles": false,
+                "hidden": false,
+                "vendor": true
+              },
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -99,6 +112,9 @@
             },
             "development": {
               "buildTarget": "elfa-vz-verifier-ui:build:development"
+            },
+            "test": {
+              "buildTarget": "elfa-vz-verifier-ui:build:test"
             }
           },
           "defaultConfiguration": "development"
