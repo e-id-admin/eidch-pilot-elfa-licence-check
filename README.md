@@ -1,3 +1,9 @@
+# DEPRECATED
+
+For the upcoming launch of the swiyu Public Beta Trust Infrastructure we created a new organisation [swiyu-admin-ch](https://github.com/swiyu-admin-ch). 
+
+This repository will be archived in the near term. New releases are published under [https://github.com/swiyu-admin-ch/eidch-elfa-licencecheck](https://github.com/swiyu-admin-ch/eidch-elfa-licencecheck).
+
 # LicenceCheck
 
 <img src="./elfa-vz-verifier-ui/src/assets/images/favicon.png" width="196"  alt="LicenceCheck logo"/>
